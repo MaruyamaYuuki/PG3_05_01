@@ -4,6 +4,7 @@
 GameScene::GameScene() {}
 
 GameScene::~GameScene() {
+	delete stageScene_;
 }
 
 void GameScene::Initialize() {
@@ -11,10 +12,12 @@ void GameScene::Initialize() {
 	input_ = KamataEngine::Input::GetInstance();
 	audio_ = KamataEngine::Audio::GetInstance();
 
+	stageScene_ = new StageScene();
+	stageScene_->Init();
 }
 
 void GameScene::Update() {
-
+	stageScene_->Update();
 }
 
 void GameScene::Draw() {
@@ -29,7 +32,7 @@ void GameScene::Draw() {
 	/// <summary>
 	/// ここに背景スプライトの処理を追加できる
 	/// </summary>
-
+	stageScene_->Draw();
 	// スプライト処理後描画
 	KamataEngine::Sprite::PostDraw();
 	// 深度バッファクリア

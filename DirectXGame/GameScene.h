@@ -8,6 +8,7 @@
 #include "3d/Camera.h"
 #include "3d/WorldTransform.h"
 #include "3d/ObjectColor.h"
+#include "StageScene.h"
 
 /// <summary>
 ///ゲームシーン
@@ -48,4 +49,5 @@ private:
 	/// ゲームシーン用
 	/// </summary>
 
+	StageScene* stageScene_ = nullptr;
 };
