@@ -1,6 +1,6 @@
 #include "InputHandler.h"
 #include "MoveLeftCommand.h"
-
+#include "MoveRightCommand.h"
 
 void InputHandler::Init()
 {
